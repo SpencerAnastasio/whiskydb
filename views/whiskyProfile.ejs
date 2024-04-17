@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href='/css/styles.css' rel='stylesheet' type='text/css'/>
+  </head>
+  <body>
+    <%- include('partials/nav') %>
+    <h1>Glen Spencer
+    <h2>Welcome to the profile page for
+      <% var words = whisky.split(" ");var name = "";for(let i=0; i < words.length; i++){words[i] = words[i][0].toUpperCase() + words[i].substr(1).toLowerCase();if(i == (words.length - 1)){name += words[i];}else{name += (words[i] + " ");};}; %>
+      <%= name %></h2>
+    <h3>This is <%= person[1] %>'s favorite dram.</h3>
+    <p>When <%= name %> meets the empty air of a whisky glass, a burst of intense smoky fruit escapes into the atmosphere.
+      Peat smoke infused with zesty lemon and lime, wrapped in waxy dark chocolate.
+      Bold menthol and black pepper slice through the sweet smoke followed by tarry ropes and graphite.</p>
+    <h2 class='tasting'>Flavor Notes</h2>
+    <h3 class='tasting'>Nose</h3>
+    <ul>
+      <% notes.nose.forEach(function(note){ %>
+        <li> <%= note %> </li>
+      <% }); %>
+    </ul>
+    <h3 class='tasting'>Palate</h3>
+    <ul>
+      <% notes.palate.forEach(function(note){ %>
+        <li> <%= note %> </li>
+      <% }); %>
+    </ul>
+    <h3 class='tasting'>Finish</h3>
+    <ul>
+      <% notes.finish.forEach(function(note){ %>
+        <li> <%= note %> </li>
+      <% }); %>
+    </ul>
+    <!-- <img src="https://vinepair.com/wp-content/uploads/2022/09/how-to-drink-peated-whiskey-mobile-640x640.jpg"> -->
+  </body>
+</html>

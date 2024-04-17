@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href='/css/styles.css' rel='stylesheet' type='text/css'/>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.6.3.min.js" integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous"></script>
+    <script type="text/javascript">
+      function submitQuery(){
+        if(document.getElementById('name').value){
+          var name = "/whisky/" + document.getElementById('name').value.replace(/ +/g, "+").substring(0).toLowerCase();
+          $("#searchWhisky").attr("action", name);
+          $("#searchWhisky").attr("method", "POST");
+          $("#searchWhisky").submit();
+        }else{
+          return;
+        };
+      };
+   </script>
+  </head>
+  <body>
+    <%- include('partials/nav') %>
+    <h1>Search Islay Whiskys</h1>
+    <form id="searchWhisky">
+      <label for="whisky">Which whisky would you like to search for?</label>
+      <input type="text" id="name" name="whisky">
+      <button onclick="submitQuery()" value="submit">submit</button>
+    </form>
+  </body>
+</html>

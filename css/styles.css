@@ -1,0 +1,39 @@
+html{
+  /* width: 100%; */
+  background-image: url("https://vinepair.com/wp-content/uploads/2022/09/how-to-drink-peated-whiskey-header.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;}
+
+body{
+  font-family: verdana;
+  color: #fff;
+  padding: 30px;}
+
+h1{
+  font-size: 48px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  text-align: center;}
+
+h2{
+  font-size: 30px;
+  letter-spacing: 2px;
+  text-align: center;}
+
+h3{
+  font-size: 20px;
+  letter-spacing: 2px;
+  text-align: center;}
+
+.tasting{
+  text-align: left;}
+
+p{
+  font-size: 16px;
+  text-align: center;};
+
+img{
+  display: inline-block;
+  vertical-align: middle;
+  max-width: 100%;
+  height: auto;}
